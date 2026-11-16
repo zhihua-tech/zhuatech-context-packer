@@ -1,0 +1,37 @@
+{
+  "title": "长上下文组装样例",
+  "settings": {
+    "budget": 100,
+    "reserve": 20
+  },
+  "rows": [
+    {
+      "id": "制度",
+      "text": "保留原始凭证。",
+      "tokens": 20,
+      "value": 3,
+      "required": true
+    },
+    {
+      "id": "案例甲",
+      "text": "退货处理样例。",
+      "tokens": 40,
+      "value": 7,
+      "required": false
+    },
+    {
+      "id": "案例乙",
+      "text": "换货处理样例。",
+      "tokens": 30,
+      "value": 5,
+      "required": false
+    },
+    {
+      "id": "摘要",
+      "text": "异常复核记录。",
+      "tokens": 30,
+      "value": 5,
+      "required": false
+    }
+  ]
+}
