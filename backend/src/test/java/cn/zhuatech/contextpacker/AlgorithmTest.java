@@ -53,6 +53,17 @@ class AlgorithmTest {
 
   /** 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ · 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。 */
   @Test
+  void enterpriseEvidenceAndBoundaries() {
+    var result=Algorithm.compute(Map.of("budget",10,"reserve",1),List.of(
+        Map.of("id","base","text","必选","required",true,"tokens",2,"value",1),
+        Map.of("id","long","text","长","required",false,"tokens",6,"value",3),
+        Map.of("id","short","text","短","required",false,"tokens",3,"value",3)));
+    var m=(Map<?,?>)result.get("metrics");assertEquals(4,m.get("totalValue"));assertEquals(5,m.get("used"));
+    assertEquals(2,m.get("requiredTokens"));assertEquals(3,m.get("optionalTokens"));assertEquals("必选\n\n短",result.get("context"));
+  }
+
+  /** 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ · 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。 */
+  @Test
   void knownResults() {
     var result = Algorithm.compute(cfg, data);
     var m = (Map<String, Object>) result.get("metrics");

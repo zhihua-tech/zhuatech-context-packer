@@ -1,0 +1,30 @@
+{
+  "title": "相同价值下的 token 节约",
+  "settings": {
+    "budget": 10,
+    "reserve": 1
+  },
+  "rows": [
+    {
+      "id": "base",
+      "text": "必选",
+      "required": true,
+      "tokens": 2,
+      "value": 1
+    },
+    {
+      "id": "long",
+      "text": "长",
+      "required": false,
+      "tokens": 6,
+      "value": 3
+    },
+    {
+      "id": "short",
+      "text": "短",
+      "required": false,
+      "tokens": 3,
+      "value": 3
+    }
+  ]
+}

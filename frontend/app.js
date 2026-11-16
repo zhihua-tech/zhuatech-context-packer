@@ -56,6 +56,8 @@ const labels = {
   context: "编排正文",
 };
 const resultLabels = {
+  requiredTokens: "必选 token",
+  optionalTokens: "可选 token",
   ...labels,
   ...{
     knownTokens: "词表命中数",

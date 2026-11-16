@@ -47,7 +47,10 @@ final class Algorithm {
       }
       trace.add(take);
     }
+    int requiredTokens = used;
     int c = free;
+    // Reconstruct from the smallest capacity achieving the same optimal value.
+    while (c > 0 && dp[c - 1] == dp[free]) c--;
     for (int j = optional.size() - 1; j >= 0; j--) {
       int i = optional.get(j);
       if (trace.get(j).get(c)) {
@@ -81,6 +84,8 @@ final class Algorithm {
             used,
             "free",
             available - used,
+            "requiredTokens", requiredTokens,
+            "optionalTokens", used - requiredTokens,
             "reserved",
             reserve,
             "totalValue",

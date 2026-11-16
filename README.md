@@ -14,7 +14,15 @@
 
 [输入样本](examples/batch.json) · [部署、接口和用户说明](docs/OPERATIONS.md) · [行业参考：yamadashy/repomix](https://github.com/yamadashy/repomix)。本项目独立实现上述子场景，不是上游的分支或完整替代品。
 
+## 1.3 · 相同价值下的 token 节约
+
+在保障必选材料并最大化总价值后，优先选择用量最少的方案；分别展示必选和可选材料的 token 用量。 已保存批次保持原快照，新口径用于新建或复制后重新运行的批次。
+
+[可直接导入的 1.3 专项验收样本](examples/acceptance.json) · 用免构建包执行 `python3 scripts/smoke.py` 可在临时库自动核对期望结果，不操作现有业务库。
+
 ## 本地启动
+
+可选：先执行 `python3 scripts/doctor.py` 检查 Java、端口和本地数据目录，检查不会初始化数据库。直接启动不要求安装 Python。
 
 **1.2 更新：** 导入 JSON 时会指出错误行和字段，不会悄悄忽略多余的列。误提交的批次，在其他人复核前可由提交人填写原因并撤回；原结果与操作记录会保留，需要修正时可复制为新批次。MySQL 下同时重试同一笔提交会返回同一个批次。
 
